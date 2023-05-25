@@ -1,0 +1,175 @@
+k= 3
+正在读取文件:  NC_009767.fna
+正在读取文件:  NC_008709.fna
+正在读取文件:  NC_009511.fna
+正在读取文件:  NC_015722.fna
+正在读取文件:  NC_011126.fna
+正在读取文件:  NC_015859.fna
+正在读取文件:  NC_007984.fna
+正在读取文件:  NC_015656.fna
+正在读取文件:  NC_011138.fna
+正在读取文件:  NC_013943.fna
+当k= 3 时:
+准确率为:  56.19499999999999 %。耗时:  2534.001662056 s
+未知物种数为:  0
+各种物种数为:
+Roseiflexus :  1240.0
+Psychromonas :  711.0
+Sphingomonas :  1358.0
+Candidatus :  1401.0
+Hydrogenobaculum :  1384.0
+Corynebacterium :  1069.0
+Baumannia :  1170.0
+Frankia :  1017.0
+Alteromonas :  668.0
+Denitrovibrio :  1221.0
+k= 4
+正在读取文件:  NC_009767.fna
+正在读取文件:  NC_008709.fna
+正在读取文件:  NC_009511.fna
+正在读取文件:  NC_015722.fna
+正在读取文件:  NC_011126.fna
+正在读取文件:  NC_015859.fna
+正在读取文件:  NC_007984.fna
+正在读取文件:  NC_015656.fna
+正在读取文件:  NC_011138.fna
+正在读取文件:  NC_013943.fna
+当k= 4 时:
+准确率为:  58.84 %。耗时:  2527.080820202 s
+未知物种数为:  0
+各种物种数为:
+Roseiflexus :  1267.0
+Psychromonas :  761.0
+Sphingomonas :  1428.0
+Candidatus :  1472.0
+Hydrogenobaculum :  1462.0
+Corynebacterium :  1083.0
+Baumannia :  1216.0
+Frankia :  1065.0
+Alteromonas :  733.0
+Denitrovibrio :  1281.0
+k= 5
+正在读取文件:  NC_009767.fna
+正在读取文件:  NC_008709.fna
+正在读取文件:  NC_009511.fna
+正在读取文件:  NC_015722.fna
+正在读取文件:  NC_011126.fna
+正在读取文件:  NC_015859.fna
+正在读取文件:  NC_007984.fna
+正在读取文件:  NC_015656.fna
+正在读取文件:  NC_011138.fna
+正在读取文件:  NC_013943.fna
+当k= 5 时:
+准确率为:  61.265 %。耗时:  2769.0386578669995 s
+未知物种数为:  0
+各种物种数为:
+Roseiflexus :  1304.0
+Psychromonas :  821.0
+Sphingomonas :  1458.0
+Candidatus :  1547.0
+Hydrogenobaculum :  1503.0
+Corynebacterium :  1112.0
+Baumannia :  1260.0
+Frankia :  1127.0
+Alteromonas :  789.0
+Denitrovibrio :  1332.0
+k= 6
+正在读取文件:  NC_009767.fna
+正在读取文件:  NC_008709.fna
+正在读取文件:  NC_009511.fna
+正在读取文件:  NC_015722.fna
+正在读取文件:  NC_011126.fna
+正在读取文件:  NC_015859.fna
+正在读取文件:  NC_007984.fna
+正在读取文件:  NC_015656.fna
+正在读取文件:  NC_011138.fna
+正在读取文件:  NC_013943.fna
+当k= 6 时:
+准确率为:  64.07000000000001 %。耗时:  2549.633726914999 s
+未知物种数为:  0
+各种物种数为:
+Roseiflexus :  1360.0
+Psychromonas :  897.0
+Sphingomonas :  1494.0
+Candidatus :  1599.0
+Hydrogenobaculum :  1545.0
+Corynebacterium :  1141.0
+Baumannia :  1304.0
+Frankia :  1198.0
+Alteromonas :  883.0
+Denitrovibrio :  1393.0
+k= 7
+正在读取文件:  NC_009767.fna
+正在读取文件:  NC_008709.fna
+正在读取文件:  NC_009511.fna
+正在读取文件:  NC_015722.fna
+正在读取文件:  NC_011126.fna
+正在读取文件:  NC_015859.fna
+正在读取文件:  NC_007984.fna
+正在读取文件:  NC_015656.fna
+正在读取文件:  NC_011138.fna
+正在读取文件:  NC_013943.fna
+当k= 7 时:
+准确率为:  68.965 %。耗时:  2302.402156668999 s
+未知物种数为:  0
+各种物种数为:
+Roseiflexus :  1514.0
+Psychromonas :  1054.0
+Sphingomonas :  1539.0
+Candidatus :  1638.0
+Hydrogenobaculum :  1632.0
+Corynebacterium :  1250.0
+Baumannia :  1390.0
+Frankia :  1277.0
+Alteromonas :  1026.0
+Denitrovibrio :  1473.0
+k= 8
+正在读取文件:  NC_009767.fna
+正在读取文件:  NC_008709.fna
+正在读取文件:  NC_009511.fna
+正在读取文件:  NC_015722.fna
+正在读取文件:  NC_011126.fna
+正在读取文件:  NC_015859.fna
+正在读取文件:  NC_007984.fna
+正在读取文件:  NC_015656.fna
+正在读取文件:  NC_011138.fna
+正在读取文件:  NC_013943.fna
+当k= 8 时:
+准确率为:  81.805 %。耗时:  1768.7197534670013 s
+未知物种数为:  0
+各种物种数为:
+Roseiflexus :  1894.0
+Psychromonas :  1458.0
+Sphingomonas :  1624.0
+Candidatus :  1748.0
+Hydrogenobaculum :  1860.0
+Corynebacterium :  1503.0
+Baumannia :  1647.0
+Frankia :  1441.0
+Alteromonas :  1580.0
+Denitrovibrio :  1606.0
+k= 9
+正在读取文件:  NC_009767.fna
+正在读取文件:  NC_008709.fna
+正在读取文件:  NC_009511.fna
+正在读取文件:  NC_015722.fna
+正在读取文件:  NC_011126.fna
+正在读取文件:  NC_015859.fna
+正在读取文件:  NC_007984.fna
+正在读取文件:  NC_015656.fna
+正在读取文件:  NC_011138.fna
+正在读取文件:  NC_013943.fna
+当k= 9 时:
+准确率为:  96.57 %。耗时:  1383.0719869370005 s
+未知物种数为:  0
+各种物种数为:
+Roseiflexus :  1996.0
+Psychromonas :  1978.0
+Sphingomonas :  1853.0
+Candidatus :  1958.0
+Hydrogenobaculum :  2005.0
+Corynebacterium :  1944.0
+Baumannia :  1966.0
+Frankia :  1800.0
+Alteromonas :  1922.0
+Denitrovibrio :  1892.0

@@ -1,0 +1,118 @@
+---
+title: "Analysis & Visualization"
+author: "Liu Yunfeiyang"
+date: "2023-05-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+#对比三种算法的性能
+# 创建数据框
+df <- data.frame(
+  K = c(3, 4, 5, 6, 7, 8, 9),
+  Acc_Pearson = c(0.4879, 0.51805, 0.5349, 0.55045, 0.5649, 0.5842, 0.6329),
+  Time_Pearson = c(15965.1724, 21899.9237, 44931.8585, 129507.4297, 464019.2565, 1967730.095, 7296917.925),
+  Acc_L1 = c(0.4856, 0.3988, 0.38545, 0.41095, 0.43755, 0.4572, 0.43305),
+  Time_L1 = c(5154.8161, 10488.8015, 30884.5, 112904.9749, 464676.7053, 1774770.831, 6964734.715),
+  Acc_KMM = c(0.56195, 0.58840, 0.61265, 0.64070, 0.68965, 0.81805, 0.96570),
+  Time_KMM = c(278859.375, 276578.125, 417828.125, 357843.750, 537203.125, 360109.375, 310906.250)
+)
+
+# 绘图
+ggplot(df, aes(x = K)) +
+  geom_line(aes(y = Acc_Pearson, colour = "Acc_Pearson"),lwd = 2) +
+  geom_line(aes(y = Acc_L1, colour = "Acc_L1"),lwd = 2) +
+  geom_line(aes(y = Acc_KMM, colour = "Acc_KMM"),lwd = 2) +
+  scale_colour_manual(name = "Method", values = c("#dce7b9", "#b3d8e0", "#a0cde5")) +
+  labs(title = "Accuracy of Three Methods in Different K Value", x = "K", y = "Accuracy") +
+  theme_minimal()
+
+ggplot(df, aes(x = K)) +
+  geom_line(aes(y = Time_Pearson, colour = "Time_Pearson"),lwd = 1.5) +
+  geom_line(aes(y = Time_L1, colour = "Time_L1"),lwd = 1.5) +
+  geom_line(aes(y = Time_KMM, colour = "Time_KMM"),lwd = 1.5) +
+  scale_colour_manual(name = "Method", values = c("#dce7b9", "#b3d8e0", "#a0cde5")) +
+  labs(title = "CPU Time of Three Methods in Different K Value", x = "K", y = "CPU Time") +
+  theme_minimal()
+```
+
+```{r}
+library(ggplot2)
+#对比CPU 和 GPU
+# 创建数据框
+df <- data.frame(K = c(3, 4, 5, 6, 7, 8, 9),
+                 CPU_Time = c(278859.375, 276578.125, 417828.125, 357843.750, 537203.125, 360109.375, 310906.250),
+                 GPU_Time = c(2534001.662, 2527080.820, 2769038.658, 2549633.727, 2302402.157, 1768719.720, 1383071.987))
+
+# 绘制折线图
+ggplot(df, aes(x = K)) + 
+  geom_line(aes(y = CPU_Time, color = "CPU Time(ms)")) + 
+  geom_line(aes(y = GPU_Time, color = "GPU Time(ms)")) + 
+  labs(title = "CPU and GPU Time in KMM", x = "k", y = "Time (ms)", color = "Time") +
+  scale_color_manual(values = c("red", "blue")) 
+```
+
+```{r}
+#读取结果文件
+L1 <- read.csv("C:/Users/云飞扬/Desktop/Score_reads/L1_results.csv")
+Pear <- read.csv("C:/Users/云飞扬/Desktop/Score_reads/Pearson_results.csv")
+Kmm <- read.csv("C:/Users/云飞扬/Desktop/Score_reads/KMM_results.csv")
+```
+
+```{r}
+#分类结果表格
+library(knitr)
+library(kableExtra)
+kable(L1, caption = "L1分类结果", format = "html", row.names = FALSE) %>%
+  kable_styling(c("striped", "hover"), full_width = FALSE)
+kable(Pear, caption = "Pearson分类结果", format = "html", row.names = FALSE) %>%
+  kable_styling(c("striped", "hover"), full_width = FALSE)
+kable(Kmm, caption = "KMM分类结果", format = "html", row.names = FALSE) %>%
+  kable_styling(c("striped", "hover"), full_width = FALSE)
+```
+
+```{r}
+# 饼图
+library(ggplot2)
+
+# 导入数据
+data <- data.frame(
+  species = c("Psychromonas", "Frankia", "Sphingomonas", "Hydrogenobaculum",
+              "Denitrovibrio", "Corynebacterium", "Alteromonas", "Baumannia",
+              "Candidatus", "Roseiflexus"),
+  count = c(26, 27, 77, 101, 109, 231, 272, 294, 346, 373)
+)
+
+# 画图
+ggplot(data, aes(x = "", y = count, fill = species)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  labs(title = "Number of DNA Sequences Different Species in Sample") +
+  scale_fill_hue(name = "Specie") +
+  theme(plot.title = element_text(family = "Bold", size = 15))
+
+```
+
+```{r}
+library(ggplot2)
+#对比单个k和多个k
+
+# 数据
+df <- data.frame(
+  k = c(3,4,5,6,7,8,9, "3,5", "3,8", "3,9", "4,8", "5,7", "6,8", "7,9", "8,9", "3,5,9", "4,7,8", "5,6,9"),
+  accuracy = c(0.56195, 0.58840, 0.61265, 0.64070, 0.68965, 0.81805, 0.96570, 0.54590, 0.70640, 0.86055, 0.70145, 0.60000, 0.69635, 0.85445, 0.85660, 0.85230, 0.68915, 0.84950)
+)
+
+# 绘制柱状图
+ggplot(df, aes(y = as.factor(k), x = accuracy, fill = factor(sapply(strsplit(as.character(k), ","), length)))) + 
+  geom_col(position = "dodge", width = 0.8) +
+  scale_fill_manual(name="Number of k", values = c("1"="#009E73", "2"="#56B4E9", "3"="#E69F00")) +
+  labs(x = "k", y = "Accuracy", title = "Comparison of KMM Accuracy Using Multiple k and Single k")
+
+```
